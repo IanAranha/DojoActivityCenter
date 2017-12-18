@@ -50,7 +50,7 @@ namespace dojoactivitycenter.Models
         [ForeignKey("UserId")]
         public int UserId { get; set; }
 
-         public User Planner { get; set; }
+        public User Planner { get; set; }
 
         public List<UserActivity> Participants { get; set; }
 

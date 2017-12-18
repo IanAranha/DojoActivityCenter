@@ -83,7 +83,7 @@ namespace dojoactivitycenter.Controllers
         public IActionResult ShowOneActivityPage()
         {
             var cur_Id = _context.Activities.Last().ActivityId;
-            var oneActivity = _context.Activities.Include(w => w.Participants).Include(x => x.Planner).Where(y => y.ActivityId == cur_Id).SingleOrDefault();
+            var oneActivity = _context.Activities.Include(w => w.Participants).ThenInclude(x => x.Participant).Include(y => y.Planner).Where(z => z.ActivityId == cur_Id).SingleOrDefault();
             ViewBag.oneactivity = oneActivity;
             return View("AddActivity");
         }
@@ -92,7 +92,7 @@ namespace dojoactivitycenter.Controllers
         [Route("show/{ActivityId}")]
         public IActionResult Show(int ActivityId)
         {
-            var oneActivity = _context.Activities.Include(w => w.Participants).Include(x => x.Planner).Where(y => y.ActivityId == ActivityId).SingleOrDefault();
+            var oneActivity = _context.Activities.Include(w => w.Participants).ThenInclude(x => x.Participant).Include(y => y.Planner).Where(z => z.ActivityId == ActivityId).SingleOrDefault();
             ViewBag.oneactivity = oneActivity;
             return View("AddActivity");
         }
