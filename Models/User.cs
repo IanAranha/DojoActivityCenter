@@ -23,7 +23,7 @@ namespace dojoactivitycenter.Models
 
         public User()
         {
-            myPlannedActivities = new List<Activity>;
+            myPlannedActivities = new List<Activity>();
         }
         
         public List<UserActivity> Events { get; set; }

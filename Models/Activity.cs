@@ -53,6 +53,10 @@ namespace dojoactivitycenter.Models
          public User Planner { get; set; }
 
         public List<UserActivity> Participants { get; set; }
+        public Activity()
+        {
+            Participants = new List<UserActivity>();
+        }
 
         
         internal class RestrictedDate : ValidationAttribute
