@@ -1,0 +1,18 @@
+﻿
+<h2>Login here</h2>
+@model dojoactivitycenter.Models.LoginUserModel
+
+<form asp-controller="Home" asp-action="Login" method="post">
+
+    <label asp-for="LoginEmail"></label>
+    <input asp-for="LoginEmail"/>
+    <span asp-validation-for="LoginEmail"></span>
+    <span>@TempData["emailerror"]</span><br>
+    
+    
+    <label asp-for="LoginPassword"></label>
+    <input asp-for="LoginPassword"/><br>
+    <span asp-validation-for="LoginPassword"></span>
+    
+    <button type="submit">LOGIN</button>
+</form>

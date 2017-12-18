@@ -1,0 +1,17 @@
+
+<a href="/dashboard">Dashboard</a>
+<br>
+<h1>Activity Details</h1>
+<h1>@ViewBag.oneactivity.ActivityTitle</h1>
+<br>
+<br>
+<h3>Event Co-Ordinator: @ViewBag.oneactivity.Planner.FirstName </h3>
+<br>
+<br>
+<h4>Description:</h4>
+<h5>@ViewBag.oneactivity.ActivityDescription</h5>
+<h5>Participants:</h5>
+@foreach(var x in @ViewBag.oneactivity.Participants)
+{
+    <p>@x.User.FirstName</p>
+}

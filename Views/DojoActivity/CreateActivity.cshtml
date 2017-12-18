@@ -1,0 +1,40 @@
+@model dojoactivitycenter.Models.Activity
+
+<h1>Activity Creating Page</h1>
+<a href="/dashboard">Dashboard</a>
+
+        <h2>Plan Your Activity</h2>
+        <form asp-controller="DojoActivity" asp-action="AddActivity" method="POST">
+            <br>
+            <span asp-validation-for="ActivityTitle"></span>
+            <label asp-for="ActivityTitle"></label>
+            <input asp-for="ActivityTitle" />
+            <br>
+            <span asp-validation-for="ActivityTime"></span>
+            <label asp-for="ActivityTime"></label>
+            <input asp-for="ActivityTime" />
+            <br>
+            <span asp-validation-for="ActivityDate"></span>
+            <label asp-for="ActivityDate"></label>
+            <input asp-for="ActivityDate" />
+            <br>
+            <span asp-validation-for="ActivityDuration"></span>
+            <label asp-for="ActivityDuration"></label>
+            <input asp-for="ActivityDuration" />
+            <label asp-for="Duration"></label>
+            <select asp-for="Duration">
+                    <option value="Days">Days</option>
+                    <option value="Hours">Hours</option>
+                    <option value="Minutes">Minutes</option>
+            </select>
+            <br>
+            <br>
+            <span asp-validation-for="ActivityDescription"></span>
+            <label asp-for="ActivityDescription"></label>
+            <input asp-for="ActivityDescription" />
+            <br>
+            <br>
+            <input type="submit" value = "Add Activity">
+        </form>
+
+

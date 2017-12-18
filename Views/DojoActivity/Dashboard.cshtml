@@ -1,0 +1,55 @@
+<h2>Dojo Activity Center Dashboard</h2>
+<h4>Welcome @ViewBag.User.FirstName</h4>
+<table border="5%" width="100%">
+    <thead>
+        <tr>  
+            <th>Activity</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Duration</th>
+            <th>Event Boss</th>
+            <th>Participants</th>
+            <th>Action</th>
+        </tr> 
+    </thead>  
+    <tbody>
+    @foreach(var x in ViewBag.activities) 
+    {   
+        var status = false;
+        <tr>
+            <td><a href="/show/@x.ActivityId">@x.ActivityTitle</a></td>
+            <td>@x.ActivityDate.ToString("D")</td>
+            <td>@x.ActivityTime.ToString("T")</td>
+            <td>@x.ActivityDuration @x.Duration</td>
+            <td>@x.Planner.FirstName</td>
+            <td>@x.Participants.Count</td>
+            @if(x.UserId==ViewBag.User.UserId)
+            {
+                status = true;
+                <td><a href = "/deleteactivity/@x.ActivityId">Delete</a></td>
+            }
+            else
+                { 
+                    @foreach(var y in x.Participants)
+                    {
+                        @if(y.UserId == @ViewBag.User.UserId)
+                        {
+                            status = true;
+                            <td><a href="/leaveactivity/@y.UserActivitiesId">Leave</a></td>
+                            break;
+                        }
+                    }
+                }
+            @if(status==false)
+            {
+                <td><a href="/joinactivity/@x.ActivityId">Join</a></td>
+            }   
+        </tr>
+    }
+    </tbody>  
+</table>
+        
+
+<form action="CreateActivity" method="get">
+    <button class="btn">New Activity</button>
+</form>

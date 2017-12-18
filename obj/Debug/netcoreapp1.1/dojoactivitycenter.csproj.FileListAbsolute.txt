@@ -1,0 +1,10 @@
+/Users/ianaranha/Desktop/dojoactivitycenter/obj/Debug/netcoreapp1.1/dojoactivitycenter.csproj.CoreCompileInputs.cache
+/Users/ianaranha/Desktop/dojoactivitycenter/obj/Debug/netcoreapp1.1/dojoactivitycenter.AssemblyInfoInputs.cache
+/Users/ianaranha/Desktop/dojoactivitycenter/obj/Debug/netcoreapp1.1/dojoactivitycenter.AssemblyInfo.cs
+/Users/ianaranha/Desktop/dojoactivitycenter/bin/Debug/netcoreapp1.1/dojoactivitycenter.deps.json
+/Users/ianaranha/Desktop/dojoactivitycenter/bin/Debug/netcoreapp1.1/dojoactivitycenter.runtimeconfig.json
+/Users/ianaranha/Desktop/dojoactivitycenter/bin/Debug/netcoreapp1.1/dojoactivitycenter.runtimeconfig.dev.json
+/Users/ianaranha/Desktop/dojoactivitycenter/bin/Debug/netcoreapp1.1/dojoactivitycenter.dll
+/Users/ianaranha/Desktop/dojoactivitycenter/bin/Debug/netcoreapp1.1/dojoactivitycenter.pdb
+/Users/ianaranha/Desktop/dojoactivitycenter/obj/Debug/netcoreapp1.1/dojoactivitycenter.dll
+/Users/ianaranha/Desktop/dojoactivitycenter/obj/Debug/netcoreapp1.1/dojoactivitycenter.pdb
