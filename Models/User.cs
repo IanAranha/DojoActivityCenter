@@ -20,11 +20,6 @@ namespace dojoactivitycenter.Models
         public string Password { get; set; }
         
         public List<Activity> myPlannedActivities { get; set; }
-
-        public User()
-        {
-            myPlannedActivities = new List<Activity>();
-        }
         
         public List<UserActivity> Events { get; set; }
         

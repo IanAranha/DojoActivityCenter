@@ -133,7 +133,7 @@ namespace dojoactivitycenter.Controllers
         [HttpGet]
         [Route("joinactivity/{ActivityId}")]
         public IActionResult Join(int ActivityId)
-        {
+        {   
             int? loggedPerson = HttpContext.Session.GetInt32("loggedPerson");
             if (loggedPerson == null)
             {
